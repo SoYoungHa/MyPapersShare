@@ -1,1 +1,1 @@
-this is the directore of my reading papers.
+this is the directory of my reading papers.

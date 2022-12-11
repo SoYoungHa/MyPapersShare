@@ -1,1 +1,1 @@
-this is a directort about my reading notes.
+# this is a directory about my reading notes.

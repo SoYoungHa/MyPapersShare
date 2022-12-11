@@ -54,11 +54,11 @@ CVPR 2017
 
 k^(x):分类结果，输出标签
 
-目的：![image](attachments/DL3FY43Z.png)
+目的：![image](../Pictures/DL3FY43Z.png)
 
 s.t. 约束条件：
 
- ![image](attachments/VQMJXJM2.png)
+ ![image](../Pictures/VQMJXJM2.png)
 
 <span style="background-color: rgb(255, 255, 255)">ξ</span> 代表了扰动向量的量级，
 
@@ -70,7 +70,7 @@ s.t. 约束条件：
 
 $$X=\left\{x1,x2,…,xm\right\}$$  from $μ$,即从μ中采样的图片集合
 
-![image](attachments/X6SNTWIB.png)
+![image](../Pictures/X6SNTWIB.png)
 
 **每次迭代时，都计算逃离当前分类域的扰动**
 
@@ -80,41 +80,41 @@ $$X=\left\{x1,x2,…,xm\right\}$$  from $μ$,即从μ中采样的图片集合
 
 求Δvi:
 
-![image](attachments/ABQTU4XR.png)
+![image](../Pictures/ABQTU4XR.png)
 
 更新v扰动：再把v限制在范数下以ε为半径的球上。
 
-![image](attachments/QF7KB4Q3.png)
+![image](../Pictures/QF7KB4Q3.png)
 
-![image](attachments/7XCUT4PQ.png)
+![image](../Pictures/7XCUT4PQ.png)
 
 **Alogrithm1**的目的不是找到最小的通用扰动，而是找到一种范数足够小的扰动
 
-<img src="attachments/HDGLIGQG.png" alt="image" style="zoom:80%;" />
+<img src="../Pictures/HDGLIGQG.png" alt="image" style="zoom:80%;" />
 
 ## 三、Universal perturbations for deep nets 深度网络的通用扰动
 
 **实验部分**
 
-![image](attachments/56FYT568.png)
+![image](../Pictures/56FYT568.png)
 
 可见fool的效果都还不错
 
-![image](attachments/MM8PZVZG.png)
+![image](../Pictures/MM8PZVZG.png)
 
 可见人眼根本看不出来区别，但网络识别的结果天差地别.
 
-![image](attachments/FEEU2CMY.png)
+![image](../Pictures/FEEU2CMY.png)
 
 ​																				**不同网络的扰动可视化**
 
 不同大小的X在验证集上的fool ratio(ImageNet一共1000class):
 
-![image](attachments/2ZDUXMK9.png)
+![image](../Pictures/2ZDUXMK9.png)
 
 跨模型通用性(Cross-model universality)：
 
-![image](attachments/2PN2CTQ2.png)
+![image](../Pictures/2PN2CTQ2.png)
 
 ## 四、Explaining the vulnerability to universal perturbations
 
@@ -122,17 +122,17 @@ $$X=\left\{x1,x2,…,xm\right\}$$  from $μ$,即从μ中采样的图片集合
 
 先做了一组扰动对比实验来体现通用扰动的特点：
 
-![image](attachments/5BEPDP43.png)
+![image](../Pictures/5BEPDP43.png)
 
 在norm很小时通用扰动就已经达到了很高的fool ratio
 
 提取n个样本处的这种法向量，并对它们进行单位化，形成正规矩阵N:</span>
 
-![image](attachments/I68XPLRZ.png)
+![image](../Pictures/I68XPLRZ.png)
 
 对N进行奇异值分解(SVG):
 
-![image](attachments/RBQUXQVZ.png)
+![image](../Pictures/RBQUXQVZ.png)
 
 根据得到的对比结果，作者认为这表明在深度网络的决策边界中存在着较大的相关性与冗余性。更精准地来说，作者认为存在一个低维子空间S，在这个S中存在着大量包裹着自然图像的决策边界的法向量
 
@@ -140,7 +140,7 @@ $$X=\left\{x1,x2,…,xm\right\}$$  from $μ$,即从μ中采样的图片集合
 
 作者假设存在使大多数自然图像蒙混的通用扰动的部分原因是由于存在这样一个低维子空间，该子空间捕获了决策边界不同区域之间的相关性
 
-![image](attachments/BIQILJ7W.png)
+![image](../Pictures/BIQILJ7W.png)
 
 
 

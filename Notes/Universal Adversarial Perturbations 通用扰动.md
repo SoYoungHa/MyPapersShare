@@ -38,7 +38,7 @@ CVPR 2017
 
 ## 一、Introduction
 
-<img src="attachments/JS9FPV38.png" alt="image" style="zoom:80%;" />
+<img src="../Pictures/JS9FPV38.png" alt="image" style="zoom:80%;" />
 
 -   提出算法：该算法寻找一组训练点的通用扰动，然后通过聚合原子的扰动向量继续进行，该原子扰动向量将连续的数据点发送到分类器的决策边界
 -   普遍扰动有着显著的泛化特性。
